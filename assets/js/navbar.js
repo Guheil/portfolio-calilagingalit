@@ -35,20 +35,29 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;
 
-// Check for saved dark mode preference
+// Check for saved dark mode preference and update icons/accessibility
 if (localStorage.getItem('darkMode') === 'enabled') {
     body.classList.add('dark-mode');
-    darkModeToggle.textContent = '☀️';
 }
+
+function updateDarkToggle() {
+    // Accessibility attributes and hint
+    const isDark = body.classList.contains('dark-mode');
+    darkModeToggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+    darkModeToggle.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+}
+
+// initialize state
+updateDarkToggle();
 
 darkModeToggle.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
 
     if (body.classList.contains('dark-mode')) {
-        darkModeToggle.textContent = '☀️';
         localStorage.setItem('darkMode', 'enabled');
     } else {
-        darkModeToggle.textContent = '🌙';
-        localStorage.setItem('darkMode', null);
+        localStorage.removeItem('darkMode');
     }
+
+    updateDarkToggle();
 });
