@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patricia Llamado - General Virtual Assistant</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- External CSS Files -->
+    <link rel="stylesheet" href="assets/style/variables.css">
+    <link rel="stylesheet" href="assets/style/header.css">
+    <link rel="stylesheet" href="assets/style/hero.css">
+    <link rel="stylesheet" href="assets/style/sections.css">
+    <link rel="stylesheet" href="assets/style/skills.css">
+    <link rel="stylesheet" href="assets/style/work.css">
+    <link rel="stylesheet" href="assets/style/gallery.css">
+    <link rel="stylesheet" href="assets/style/cta-footer.css">
+    <link rel="stylesheet" href="assets/style/loader.css">
+    <link rel="stylesheet" href="assets/style/modal.css">
+    
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <div class="loader-text">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Patricia.</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Experience</a></li>
+                <li><a href="#gallery">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="dark-mode-toggle" id="darkModeToggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="burger" id="burger">
+                    <div class="burger-inner">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-text">
+                <span class="hero-badge"><i class="fas fa-sparkles"></i> Available for Work</span>
+                <h1>Hi, I'm <span class="gradient-text">Patricia</span></h1>
+                <h2 class="typing-text">General Virtual Assistant</h2>
+                <p>Highly versatile and motivated professional demonstrating strong attention to detail, reliable follow-through, and a proactive approach to service and operations.</p>
+                <!-- <div class="hero-skills">
+                    <span class="skill-tag"><i class="fas fa-pen-nib"></i> <span>Content Creator</span></span>
+                    <span class="skill-tag"><i class="fas fa-video"></i> <span>Video Editor</span></span>
+                    <span class="skill-tag"><i class="fas fa-palette"></i> <span>Graphic Design</span></span>
+                    <span class="skill-tag"><i class="fas fa-headset"></i> <span>Customer Service</span></span>
+                </div> -->
+                <div class="cta-buttons">
+                    <a href="#work" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-wrapper">
+                    <img src="assets/images/hero-image.png" alt="Patricia Llamado">
+                    <div class="hero-glow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-image-col">
+                <div class="about-image-wrapper">
+                    <img src="assets/images/about-image.jpg" alt="Patricia Llamado">
+                    <div class="experience-badge">
+                        <span class="exp-number">4+</span>
+                        <span class="exp-text">Years of Experience</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content-col">
+                <span class="section-subtitle">Get to know me</span>
+                <h2 class="section-heading">About Me</h2>
+                <p class="about-lead">I'm a highly versatile and motivated professional with a strong background in digital content creation, customer service, and administrative support.</p>
+                <p>My experience spans across various industries including content creation, education support, gaming services, and library management. With a keen eye for detail and a commitment to excellence, I bring a proactive approach to every project.</p>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-icon"><i class="fas fa-bullseye"></i></div>
+                        <div class="highlight-text">
+                            <h4>Detail-Oriented</h4>
+                            <p>Meticulous attention to every task</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="highlight-text">
+                            <h4>Fast Learner</h4>
+                            <p>Quick to adapt to new tools</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon"><i class="fas fa-handshake"></i></div>
+                        <div class="highlight-text">
+                            <h4>Team Player</h4>
+                            <p>Collaborative & communicative</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon"><i class="fas fa-location-dot"></i></div>
+                        <div class="highlight-text">
+                            <h4>Based in Philippines</h4>
+                            <p>San Juan City, Metro Manila</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Section -->
+    <div class="marquee-section">
+        <div class="marquee-content">
+            <span>Content Creation</span>
+            <span>•</span>
+            <span>Virtual Assistance</span>
+            <span>•</span>
+            <span>Graphic Design</span>
+            <span>•</span>
+            <span>Video Editing</span>
+            <span>•</span>
+            <span>Customer Service</span>
+            <span>•</span>
+            <span>E-commerce</span>
+            <span>•</span>
+            <span>Content Creation</span>
+            <span>•</span>
+            <span>Virtual Assistance</span>
+            <span>•</span>
+            <span>Graphic Design</span>
+            <span>•</span>
+            <span>Video Editing</span>
+            <span>•</span>
+            <span>Customer Service</span>
+            <span>•</span>
+            <span>E-commerce</span>
+            <span>•</span>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="services-container">
+            <div class="services-header">
+                <span class="section-subtitle">What I Offer</span>
+                <h2 class="section-heading">My Services</h2>
+                <p class="services-desc">I provide comprehensive virtual assistance and creative services tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card featured">
+                    <div class="service-number">01</div>
+                    <div class="service-icon-wrapper">
+                        <span class="service-icon"><i class="fas fa-palette"></i></span>
+                    </div>
+                    <h3>Content Creation</h3>
+                    <p>Creating engaging content for Reddit, social media, and digital platforms that drives community growth.</p>
+                    <ul class="service-list">
+                        <li>Reddit Strategy</li>
+                        <li>Video Editing</li>
+                        <li>Graphic Design</li>
+                        <li>Community Management</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">02</div>
+                    <div class="service-icon-wrapper">
+                        <span class="service-icon"><i class="fas fa-laptop-code"></i></span>
+                    </div>
+                    <h3>Technical Support</h3>
+                    <p>Technical expertise in computer systems, e-commerce management, and web development.</p>
+                    <ul class="service-list">
+                        <li>WordPress Development</li>
+                        <li>E-commerce Setup</li>
+                        <li>Technical Troubleshooting</li>
+                        <li>Software Training</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">03</div>
+                    <div class="service-icon-wrapper">
+                        <span class="service-icon"><i class="fas fa-clipboard-list"></i></span>
+                    </div>
+                    <h3>Administrative Support</h3>
+                    <p>Efficient task management, documentation, and organizational support for businesses.</p>
+                    <ul class="service-list">
+                        <li>Research & Documentation</li>
+                        <li>Task Management</li>
+                        <li>Customer Service</li>
+                        <li>Data Entry</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">04</div>
+                    <div class="service-icon-wrapper">
+                        <span class="service-icon"><i class="fas fa-graduation-cap"></i></span>
+                    </div>
+                    <h3>Educational Support</h3>
+                    <p>Personalized academic assistance and instructional support for students.</p>
+                    <ul class="service-list">
+                        <li>Academic Tutoring</li>
+                        <li>Assignment Help</li>
+                        <li>Research Assistance</li>
+                        <li>Study Planning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-section" id="work">
+        <div class="experience-container">
+            <div class="experience-header">
+                <span class="section-subtitle">My Journey</span>
+                <h2 class="section-heading">Work Experience</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Dec 2025 - Present</span>
+                        <h3>Reddit Content Creator</h3>
+                        <p class="timeline-company">Freelance • Part Time</p>
+                        <p>Developing high-engagement content across niche Reddit communities. Expert at identifying trends and creating shareable formats including infographics and custom graphics.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2021 - Present</span>
+                        <h3>Student Support Specialist</h3>
+                        <p class="timeline-company">Remote</p>
+                        <p>Providing personalized instructional support and administrative guidance to students. Adept at managing tasks efficiently and delivering reliable academic assistance.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2021 - Present</span>
+                        <h3>Leveling Specialist</h3>
+                        <p class="timeline-company">Freelance</p>
+                        <p>High-level gaming support specialist focused on task optimization and strategic gameplay execution. Achieved 100% adherence to client goals.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023</span>
+                        <h3>Barista</h3>
+                        <p class="timeline-company">Coffee Shop</p>
+                        <p>Detail-oriented coffee specialist proficient in all aspects of coffee preparation. Expert in drink customization and maintaining high-volume equipment.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2021 - 2022</span>
+                        <h3>Librarian Assistant</h3>
+                        <p class="timeline-company">National University</p>
+                        <p>Managed daily circulation tasks with 200+ daily transactions. Provided professional customer service and maintained organized library operations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery Section -->
+    <section class="portfolio-section" id="gallery">
+        <div class="portfolio-container">
+            <div class="portfolio-header">
+                <span class="section-subtitle">My Work</span>
+                <h2 class="section-heading">Featured Projects</h2>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item large">
+                    <img src="assets/images/photo_6224374207638866975_y.jpg" alt="S'mores Cookie Packaging">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Packaging Design</span>
+                            <h3>S'mores Cookie Packaging</h3>
+                            <p>Product packaging &amp; branding for a bakery product</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="assets/images/image.png" alt="Church Event Flyer">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Poster Design</span>
+                            <h3>Church Event Flyer</h3>
+                            <p>Event poster and program layout</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="assets/images/photo_6224374207638866976_y.jpg" alt="Book Week Illustration">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            
+                             <span class="portfolio-category">Campaign Design</span>
+                            <h3>Book Drive Promotion</h3>
+                            <p>Donation campaign artwork and signage</p>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="assets/images/photo_6224374207638866977_y.jpg" alt="Fellowship Poster">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Illustration</span>P
+                             <h3>Book Week Artwork</h3>
+                            <p>Educational event graphics and promotional art</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="assets/images/photo_6224374207638866978_y.jpg" alt="Book Drive Promotion">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                           
+                            <span class="portfolio-category">Community Poster</span>
+                            <h3>Fellowship Poster</h3>
+                            <p>Community outreach and event promotion</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item large">
+                    <img src="assets/images/photo_6224374207638866979_y.jpg" alt="Marathon Event Poster">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Event Poster</span>
+                            <h3>Marathon Event Poster</h3>
+                            <p>Large-format promotional poster design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="assets/images/photo_6224374207638866980_y.jpg" alt="Donation Dropoff Poster">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Community Outreach</span>
+                            <h3>Donation Drop-off Poster</h3>
+                            <p>Flyer for collection drives and community events</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-content">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-heading">Let's Work Together</h2>
+                <p>Ready to start your project? I'm here to help bring your ideas to life. Let's create something amazing together!</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:autumnhaira@gmail.com">autumnhaira@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fas fa-location-dot"></i></span>
+                        <div>
+                            <h4>Location</h4>
+                            <p>San Juan City, Philippines</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="mailto:autumnhaira@gmail.com" class="btn btn-primary btn-large">
+                    <span>Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </a>
+            </div>
+            <div class="contact-decoration">
+                <div class="decoration-circle"></div>
+                <div class="decoration-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <span class="logo">Patricia.</span>
+                    <p>General Virtual Assistant dedicated to helping businesses grow through quality digital services and creative solutions.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="mailto:autumnhaira@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Content Creation</a></li>
+                        <li><a href="#services">Virtual Assistance</a></li>
+                        <li><a href="#services">Graphic Design</a></li>
+                        <li><a href="#services">Admin Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:autumnhaira@gmail.com">autumnhaira@gmail.com</a></li>
+                        <li><a href="#contact">San Juan City, PH</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Patricia Llamado. All rights reserved.</p>
+                <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"><i class="fas fa-chevron-up"></i></button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modal -->
+    <div class="modal" id="portfolioModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-content">
+                <img src="" alt="Project" id="modalImage">
+                <div class="modal-info">
+                    <span class="modal-category"></span>
+                    <h3 class="modal-title"></h3>
+                    <p class="modal-description"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript Files -->
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/parallax.js"></script>
+    <script src="assets/js/modal.js"></script>
+</body>
+</html>

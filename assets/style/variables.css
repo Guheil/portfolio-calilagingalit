@@ -1,0 +1,104 @@
+/* CSS Variables */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-pink: #ff69b4;
+    --dark-pink: #d81b60;
+    --light-pink: #ffc1e3;
+    --bg-light: #ffffff;
+    --bg-secondary-light: #f8f9fa;
+    --text-light: #1a202c;
+    --text-secondary-light: #64748b;
+    --bg-dark: #0a0a0a;
+    --bg-secondary-dark: #151515;
+    --text-dark: #f8fafc;
+    --text-secondary-dark: #94a3b8;
+    --transition-speed: 0.3s;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    color: var(--text-light);
+    background: var(--bg-light);
+    transition: background var(--transition-speed) ease, color var(--transition-speed) ease;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body.dark-mode {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+/* Section Titles */
+.section-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title span {
+    background: linear-gradient(135deg, var(--primary-pink), var(--dark-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-subtitle {
+    color: var(--text-secondary-light);
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+
+body.dark-mode .section-subtitle {
+    color: var(--text-secondary-dark);
+}
+
+/* Full Width Sections */
+section {
+    width: 100%;
+}
+
+/* Selection Color */
+::selection {
+    background: var(--primary-pink);
+    color: white;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary-light);
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+    background: var(--bg-secondary-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--primary-pink), var(--dark-pink));
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-pink);
+}

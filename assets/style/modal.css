@@ -1,0 +1,141 @@
+/* Portfolio Modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+.modal-container {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    z-index: 2;
+    transform: scale(0.9) translateY(30px);
+    transition: transform 0.4s ease;
+}
+
+.modal.active .modal-container {
+    transform: scale(1) translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.modal-close:hover {
+    background: var(--primary-pink);
+    transform: rotate(90deg);
+}
+
+.modal-content {
+    background: var(--bg-light);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-height: 85vh;
+}
+
+body.dark-mode .modal-content {
+    background: var(--bg-secondary-dark);
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 60vh;
+    object-fit: contain;
+    background: #000;
+}
+
+.modal-info {
+    padding: 2rem;
+}
+
+.modal-category {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-pink), var(--dark-pink));
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.modal-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+body.dark-mode .modal-title {
+    color: var(--text-dark);
+}
+
+.modal-description {
+    color: var(--text-secondary-light);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+body.dark-mode .modal-description {
+    color: var(--text-secondary-dark);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .modal-container {
+        max-width: 95%;
+    }
+
+    .modal-close {
+        top: -45px;
+        right: 0;
+        font-size: 1.5rem;
+    }
+
+    .modal-content img {
+        max-height: 50vh;
+    }
+
+    .modal-info {
+        padding: 1.5rem;
+    }
+
+    .modal-title {
+        font-size: 1.4rem;
+    }
+}
